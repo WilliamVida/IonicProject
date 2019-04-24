@@ -1,0 +1,48 @@
+<!--
+  Generated template for the PrimaryPickerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Primary Candidate Picker</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list radio-group [(ngModel)]="status">
+    <ion-item>
+      <ion-label>Joe Biden</ion-label>
+      <ion-radio value="Joe Biden"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Bernie Sanders</ion-label>
+      <ion-radio value="Bernie Sanders"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Kamala Harris</ion-label>
+      <ion-radio value="Kamala Harris"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pete Buttigieg</ion-label>
+      <ion-radio value="Pete Buttigieg"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Elizabeth Warren</ion-label>
+      <ion-radio value="Elizabeth Warren"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Beto O'Rourke</ion-label>
+      <ion-radio value="Beto O'Rourke"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cory Booker</ion-label>
+      <ion-radio value="Cory Booker"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button (click)="onSave()" round>Save</button>
+
+</ion-content>

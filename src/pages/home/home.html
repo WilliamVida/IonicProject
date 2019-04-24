@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <button ion-button (click)="toVatPage()" round>List of European Countries by VAT Rate</button>
+  <br>
+  <button ion-button (click)="toCurrencyPage()" round>Currency Converter</button>
+  <br>
+  <button ion-button (click)="toLocationPage()" round>Current Coordinates</button>
+  <br>
+  <button ion-button (click)="toPrimaryPage()" round>2020 Democratic Presidential Nomination</button>
+
 </ion-content>

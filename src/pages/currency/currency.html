@@ -1,0 +1,28 @@
+<!-- https://hackernoon.com/ionic-currency-converter-8f33d3d76d2d -->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Currency Converter
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <select [(ngModel)]="fromCurr" (change)="getCurrencyRate()">
+    <option *ngFor="let item of countryCodes" selected value="{{item}}">{{item}} {{countryNames.get(item)}}</option>
+  </select>
+  <ion-input type="number" [(ngModel)]="fromValue" placeholder="Enter {{countryNames.get(fromCurr)}} to exchange"
+    (keyup)="calculateCurrencyOne()"></ion-input>
+
+  <p>Base rate: {{resultRate}}</p>
+  <br>
+
+  <select [(ngModel)]="toCurr" (change)="getCurrencyRate()">
+    <option *ngFor="let item of countryCodes" value="{{item}}">{{item}} {{countryNames.get(item)}}</option>
+  </select>
+  <ion-input type="number" [(ngModel)]="toValue" placeholder="Total in {{countryNames.get(toCurr)}}"
+    (keyup)="calculateCurrencyTwo()"></ion-input>
+
+</ion-content>

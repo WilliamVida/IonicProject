@@ -4,13 +4,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { VatProvider } from '../providers/vat-prov/vat-prov';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  rootPage: any = HomePage;
+  vats: any = [];
+
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private vatr: VatProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -18,5 +21,11 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-}
 
+  ngOnInit() {
+    this.vatr.getVat().subscribe(data => {
+      this.vats = data.vats;
+    });
+  }
+
+}

@@ -1,0 +1,16 @@
+<!-- Plugin https://ionicframework.com/docs/native/geolocation -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Location</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button (click)="locate()" round>Get Location</button>
+
+  <h2>Current Latitude: {{lat}}</h2>
+  <br>
+  <h2>Current Longitude: {{long}}</h2>
+
+</ion-content>
