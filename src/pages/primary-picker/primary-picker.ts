@@ -24,11 +24,11 @@ export class PrimaryPickerPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrimaryPickerPage');
   }
+
   onSave() {
     console.log(this.status);
     this.storage.set("status", this.status);
     this.navCtrl.pop();
   }
-
 
 }

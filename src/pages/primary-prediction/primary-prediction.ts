@@ -17,7 +17,7 @@ import { PrimaryPickerPage } from '../primary-picker/primary-picker';
 })
 export class PrimaryPredictionPage {
   information: string;
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
 
   }
@@ -33,4 +33,5 @@ export class PrimaryPredictionPage {
       console.log(err);
     });
   }
+
 }
