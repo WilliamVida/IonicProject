@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { PrimaryPickerPage } from '../primary-picker/primary-picker';
 
 /**
  * Generated class for the PrimaryPredictionPage page.
@@ -16,21 +17,19 @@ import { Storage } from '@ionic/storage';
 })
 export class PrimaryPredictionPage {
   information: string;
-
   constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
 
   }
 
   openStatusPage() {
-    this.navCtrl.push('PrimaryPickerPage');
+    this.navCtrl.push(PrimaryPickerPage);
   }
 
   ionViewWillEnter() {
-    this.storage.get("prediction").then((val) => {
+    this.storage.get("status").then((val) => {
       this.information = val;
     }).catch((err) => {
       console.log(err);
     });
   }
-  
 }

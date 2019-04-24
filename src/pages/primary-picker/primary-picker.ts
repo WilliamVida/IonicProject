@@ -15,7 +15,7 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'primary-picker.html',
 })
 export class PrimaryPickerPage {
-  prediction: string;
+  status: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
 
@@ -24,11 +24,11 @@ export class PrimaryPickerPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrimaryPickerPage');
   }
-
   onSave() {
-    console.log(this.prediction);
-    this.storage.set("prediction", this.prediction);
+    console.log(this.status);
+    this.storage.set("status", this.status);
     this.navCtrl.pop();
   }
+
 
 }

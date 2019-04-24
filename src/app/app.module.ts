@@ -19,6 +19,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import { IonicStorageModule } from '@ionic/storage';
 import { PrimaryPredictionPage } from '../pages/primary-prediction/primary-prediction';
+import { PrimaryPickerPage } from '../pages/primary-picker/primary-picker';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PrimaryPredictionPage } from '../pages/primary-prediction/primary-predi
     VatratePage,
     CurrencyPage,
     LocationPage,
-    PrimaryPredictionPage
+    PrimaryPredictionPage,
+    PrimaryPickerPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { PrimaryPredictionPage } from '../pages/primary-prediction/primary-predi
     VatratePage,
     CurrencyPage,
     LocationPage,
-    PrimaryPredictionPage
+    PrimaryPredictionPage,
+    PrimaryPickerPage
   ],
   providers: [
     StatusBar,
